@@ -17,12 +17,12 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        $exceptions->render(function (AuthenticationException $e, Request $request) {
-            if ($request->is('api/*')) {
-                return response()->json([
-                    'status'  => 0,
-                    'message' => 'Unauthorized access.',
-                ], 401);
-            }
-        });
+        // $exceptions->render(function (AuthenticationException $e, Request $request) {
+        //     if ($request->is('api/*')) {
+        //         return response()->json([
+        //             'status'  => 0,
+        //             'message' => 'Unauthorized access.',
+        //         ], 401);
+        //     }
+        // });
     })->create();
